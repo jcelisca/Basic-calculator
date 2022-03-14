@@ -66,5 +66,32 @@ public class BasicCalculatorTest {
                 () -> first + " - " + second + " should equal " + expectedResult);
     }
 
+    @Test
+    @DisplayName("Testing multiply: 2*3=6")
+    public void multiply() {
+        // Arrange
+        Long number1 = 2L;
+        Long number2 = 3L;
+        Long expectedValue = 6L;
+
+        // Act
+        Long result = basicCalculator.multiplication(number1, number2);
+
+        //assert
+        Assertions.assertEquals(expectedValue, result);
+    }
+
+    @DisplayName("Testing several multiplications")
+    @ParameterizedTest(name = "{0} * {1} = {2}")
+    @CsvSource({
+            "2,    1,   2",
+            "5,    2,   10",
+            "6,    5,   30",
+            "10,   2,   20"
+    })
+    public void severalMultiplications(Long first, Long second, Long expectedResult) {
+        Assertions.assertEquals(expectedResult, basicCalculator.multiplication(first, second),
+                () -> first + " * " + second + " should equal " + expectedResult);
+    }
 
 }
