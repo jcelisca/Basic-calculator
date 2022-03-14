@@ -27,7 +27,7 @@ public class BasicCalculator {
         if(number2 == 0){
             throw new IllegalArgumentException("No se puede dividir por 0");
         }
-        return number1 * number2;
+        return number1 / number2;
     }
 
 }
