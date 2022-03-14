@@ -13,17 +13,17 @@ public class BasicCalculator {
     }
 
     public Long rest(Long number1, Long number2) {
-        logger.info( "Summing {} + {}", number1, number2 );
+        logger.info( "Resting {} - {}", number1, number2 );
         return number1 - number2;
     }
 
     public Long multiplication(Long number1, Long number2) {
-        logger.info( "Summing {} + {}", number1, number2 );
+        logger.info( "Multiplying {} * {}", number1, number2 );
         return number1 * number2;
     }
 
     public Long division(Long number1, Long number2) {
-        logger.info( "Summing {} + {}", number1, number2 );
+        logger.info( "Dividing {} / {}", number1, number2 );
         if(number2 == 0){
             throw new IllegalArgumentException("No se puede dividir por 0");
         }
